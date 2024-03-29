@@ -1,0 +1,18 @@
+name: Prod react.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - run: cd /var/www/Plena-Vue-Dapp; git pull ; 
+    - run: cd /var/www/Plena-Vue-Dapp; npm install 
+    - run: cd /var/www/Plena-Vue-Dapp; CI=false npm run build
+    - run: sudo chown ubuntu:www-data -R /var/www/Plena-Vue-Dapp/dist

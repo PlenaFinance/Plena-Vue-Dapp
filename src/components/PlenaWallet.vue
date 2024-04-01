@@ -8,7 +8,7 @@
       <a-button type="primary" @click="showModel" class="text-sm font-bold">
         Connect
       </a-button>
-      <MyModal
+      <PlenaModal
         :config="config"
         :dataURLs.sync="dataURL"
         :spinner.sync="spinnerOn"
@@ -91,7 +91,7 @@ import SignModal from "../modals/SignModal.vue";
 import TxnModal from "@/modals/TxnModal.vue";
 
 import { ethers } from "ethers";
-import { createToggleMixin } from "plena-class-wallet-sdk-vuejs";
+import { createToggleMixin } from "plena-vue-sdk";
 
 // Vue.use(PlenaModalPlugin)
 

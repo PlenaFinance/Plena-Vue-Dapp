@@ -2,7 +2,7 @@
 import App from "./App.vue";
 import Vue from "vue";
 import Antd from "ant-design-vue";
-import { PlenaModalPlugin } from "plena-class-wallet-sdk-vuejs";
+import { PlenaModalPlugin } from "plena-vue-sdk";
 import "./index.css";
 import "ant-design-vue/dist/antd.css";
 
